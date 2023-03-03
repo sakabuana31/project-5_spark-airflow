@@ -1,0 +1,89 @@
+[2023-03-03 10:56:53,033] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: avg_product_price.spark_submit manual__2023-03-03T10:56:51.751276+00:00 [queued]>
+[2023-03-03 10:56:53,043] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: avg_product_price.spark_submit manual__2023-03-03T10:56:51.751276+00:00 [queued]>
+[2023-03-03 10:56:53,043] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-03 10:56:53,043] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-03-03 10:56:53,043] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-03 10:56:53,058] {taskinstance.py:1377} INFO - Executing <Task(SparkSubmitOperator): spark_submit> on 2023-03-03 10:56:51.751276+00:00
+[2023-03-03 10:56:53,063] {standard_task_runner.py:52} INFO - Started process 1582 to run task
+[2023-03-03 10:56:53,067] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'avg_product_price', 'spark_submit', 'manual__2023-03-03T10:56:51.751276+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/avg_product_price.py', '--cfg-path', '/tmp/tmpi5_fn2m2', '--error-file', '/tmp/tmp8pttw8rl']
+[2023-03-03 10:56:53,068] {standard_task_runner.py:80} INFO - Job 3: Subtask spark_submit
+[2023-03-03 10:56:53,117] {task_command.py:370} INFO - Running <TaskInstance: avg_product_price.spark_submit manual__2023-03-03T10:56:51.751276+00:00 [running]> on host bc6e20906570
+[2023-03-03 10:56:53,184] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ayyoub
+AIRFLOW_CTX_DAG_ID=avg_product_price
+AIRFLOW_CTX_TASK_ID=spark_submit
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-03T10:56:51.751276+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-03T10:56:51.751276+00:00
+[2023-03-03 10:56:53,193] {base.py:68} INFO - Using connection ID 'spark-hadoop' for task execution.
+[2023-03-03 10:56:53,194] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master local[*] --name arrow-spark /hadoop-data/map_reduce/spark/average_price.py
+[2023-03-03 10:56:55,506] {spark_submit.py:495} INFO - 23/03/03 10:56:55 INFO SparkContext: Running Spark version 3.3.2
+[2023-03-03 10:56:55,568] {spark_submit.py:495} INFO - 23/03/03 10:56:55 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-03-03 10:56:55,679] {spark_submit.py:495} INFO - 23/03/03 10:56:55 INFO ResourceUtils: ==============================================================
+[2023-03-03 10:56:55,679] {spark_submit.py:495} INFO - 23/03/03 10:56:55 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2023-03-03 10:56:55,680] {spark_submit.py:495} INFO - 23/03/03 10:56:55 INFO ResourceUtils: ==============================================================
+[2023-03-03 10:56:55,680] {spark_submit.py:495} INFO - 23/03/03 10:56:55 INFO SparkContext: Submitted application: average_product_price
+[2023-03-03 10:56:55,702] {spark_submit.py:495} INFO - 23/03/03 10:56:55 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2023-03-03 10:56:55,714] {spark_submit.py:495} INFO - 23/03/03 10:56:55 INFO ResourceProfile: Limiting resource is cpu
+[2023-03-03 10:56:55,715] {spark_submit.py:495} INFO - 23/03/03 10:56:55 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2023-03-03 10:56:55,771] {spark_submit.py:495} INFO - 23/03/03 10:56:55 INFO SecurityManager: Changing view acls to: ***
+[2023-03-03 10:56:55,772] {spark_submit.py:495} INFO - 23/03/03 10:56:55 INFO SecurityManager: Changing modify acls to: ***
+[2023-03-03 10:56:55,772] {spark_submit.py:495} INFO - 23/03/03 10:56:55 INFO SecurityManager: Changing view acls groups to:
+[2023-03-03 10:56:55,773] {spark_submit.py:495} INFO - 23/03/03 10:56:55 INFO SecurityManager: Changing modify acls groups to:
+[2023-03-03 10:56:55,774] {spark_submit.py:495} INFO - 23/03/03 10:56:55 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(***); groups with view permissions: Set(); users  with modify permissions: Set(***); groups with modify permissions: Set()
+[2023-03-03 10:56:56,067] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO Utils: Successfully started service 'sparkDriver' on port 35905.
+[2023-03-03 10:56:56,128] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO SparkEnv: Registering MapOutputTracker
+[2023-03-03 10:56:56,180] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO SparkEnv: Registering BlockManagerMaster
+[2023-03-03 10:56:56,204] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2023-03-03 10:56:56,204] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2023-03-03 10:56:56,210] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2023-03-03 10:56:56,240] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-1e850b72-0b30-4b7c-a3c5-0d11ccf4990b
+[2023-03-03 10:56:56,262] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2023-03-03 10:56:56,286] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO SparkEnv: Registering OutputCommitCoordinator
+[2023-03-03 10:56:56,538] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2023-03-03 10:56:56,700] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO Executor: Starting executor ID driver on host bc6e20906570
+[2023-03-03 10:56:56,711] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2023-03-03 10:56:56,740] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33591.
+[2023-03-03 10:56:56,741] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO NettyBlockTransferService: Server created on bc6e20906570:33591
+[2023-03-03 10:56:56,744] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2023-03-03 10:56:56,753] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, bc6e20906570, 33591, None)
+[2023-03-03 10:56:56,757] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO BlockManagerMasterEndpoint: Registering block manager bc6e20906570:33591 with 434.4 MiB RAM, BlockManagerId(driver, bc6e20906570, 33591, None)
+[2023-03-03 10:56:56,761] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, bc6e20906570, 33591, None)
+[2023-03-03 10:56:56,764] {spark_submit.py:495} INFO - 23/03/03 10:56:56 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, bc6e20906570, 33591, None)
+[2023-03-03 10:56:57,010] {spark_submit.py:495} INFO - /opt/spark-3.3.2-bin-hadoop3/python/lib/pyspark.zip/pyspark/sql/context.py:114: FutureWarning: Deprecated in 3.0.0. Use SparkSession.builder.getOrCreate() instead.
+[2023-03-03 10:56:57,199] {spark_submit.py:495} INFO - 23/03/03 10:56:57 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2023-03-03 10:56:57,205] {spark_submit.py:495} INFO - 23/03/03 10:56:57 INFO SharedState: Warehouse path is 'file:/home/***/spark-warehouse'.
+[2023-03-03 10:56:58,453] {spark_submit.py:495} INFO - Traceback (most recent call last):
+[2023-03-03 10:56:58,453] {spark_submit.py:495} INFO - File "/hadoop-data/map_reduce/spark/average_price.py", line 20, in <module>
+[2023-03-03 10:56:58,453] {spark_submit.py:495} INFO - calculate_avg()
+[2023-03-03 10:56:58,453] {spark_submit.py:495} INFO - File "/hadoop-data/map_reduce/spark/average_price.py", line 6, in calculate_avg
+[2023-03-03 10:56:58,454] {spark_submit.py:495} INFO - df_load = sqlContext.read.option("header",True).csv('hdfs://namenode:8020/user/root/input/Sales.csv')
+[2023-03-03 10:56:58,454] {spark_submit.py:495} INFO - File "/opt/spark-3.3.2-bin-hadoop3/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 535, in csv
+[2023-03-03 10:56:58,454] {spark_submit.py:495} INFO - File "/opt/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py", line 1322, in __call__
+[2023-03-03 10:56:58,454] {spark_submit.py:495} INFO - File "/opt/spark-3.3.2-bin-hadoop3/python/lib/pyspark.zip/pyspark/sql/utils.py", line 196, in deco
+[2023-03-03 10:56:58,462] {spark_submit.py:495} INFO - pyspark.sql.utils.AnalysisException: Path does not exist: hdfs://namenode:8020/user/root/input/Sales.csv
+[2023-03-03 10:56:58,496] {spark_submit.py:495} INFO - 23/03/03 10:56:58 INFO SparkContext: Invoking stop() from shutdown hook
+[2023-03-03 10:56:58,508] {spark_submit.py:495} INFO - 23/03/03 10:56:58 INFO SparkUI: Stopped Spark web UI at http://bc6e20906570:4040
+[2023-03-03 10:56:58,522] {spark_submit.py:495} INFO - 23/03/03 10:56:58 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2023-03-03 10:56:58,533] {spark_submit.py:495} INFO - 23/03/03 10:56:58 INFO MemoryStore: MemoryStore cleared
+[2023-03-03 10:56:58,533] {spark_submit.py:495} INFO - 23/03/03 10:56:58 INFO BlockManager: BlockManager stopped
+[2023-03-03 10:56:58,541] {spark_submit.py:495} INFO - 23/03/03 10:56:58 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2023-03-03 10:56:58,545] {spark_submit.py:495} INFO - 23/03/03 10:56:58 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2023-03-03 10:56:58,553] {spark_submit.py:495} INFO - 23/03/03 10:56:58 INFO SparkContext: Successfully stopped SparkContext
+[2023-03-03 10:56:58,553] {spark_submit.py:495} INFO - 23/03/03 10:56:58 INFO ShutdownHookManager: Shutdown hook called
+[2023-03-03 10:56:58,554] {spark_submit.py:495} INFO - 23/03/03 10:56:58 INFO ShutdownHookManager: Deleting directory /tmp/spark-505232d1-1302-4138-aaed-9cbcc41c92c7
+[2023-03-03 10:56:58,557] {spark_submit.py:495} INFO - 23/03/03 10:56:58 INFO ShutdownHookManager: Deleting directory /tmp/spark-505232d1-1302-4138-aaed-9cbcc41c92c7/pyspark-79be578b-f5f1-4c3c-91fe-3de15f8cf397
+[2023-03-03 10:56:58,561] {spark_submit.py:495} INFO - 23/03/03 10:56:58 INFO ShutdownHookManager: Deleting directory /tmp/spark-b8c29bef-46dc-4b59-84f8-8f387fc29768
+[2023-03-03 10:56:58,654] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/usr/local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 427, in submit
+    f"Cannot execute: {self._mask_cmd(spark_submit_cmd)}. Error code is: {returncode}."
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master local[*] --name arrow-spark /hadoop-data/map_reduce/spark/average_price.py. Error code is: 1.
+[2023-03-03 10:56:58,659] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=avg_product_price, task_id=spark_submit, execution_date=20230303T105651, start_date=20230303T105653, end_date=20230303T105658
+[2023-03-03 10:56:58,670] {standard_task_runner.py:97} ERROR - Failed to execute job 3 for task spark_submit (Cannot execute: spark-submit --master local[*] --name arrow-spark /hadoop-data/map_reduce/spark/average_price.py. Error code is: 1.; 1582)
+[2023-03-03 10:56:58,721] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-03-03 10:56:58,752] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
